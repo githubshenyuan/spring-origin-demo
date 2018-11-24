@@ -12,4 +12,14 @@
     <artifactId>spring-origin</artifactId>
 
 
+    <modules>
+        <module>spring-aop</module>
+        <module>spring-beans</module>
+        <module>spring-context</module>
+        <module>spring-core</module>
+        <module>spring-parent</module>
+        <module>spring-expression</module>
+        <module>spring-instrument</module>
+
+    </modules>
 </project>
