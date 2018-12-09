@@ -1,6 +1,8 @@
 package com.example.controller;
 
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 
 /**
@@ -11,5 +13,7 @@ public class DemoControllerTest {
 
     @Test
     public void demo() {
+        ApplicationContext applicationContext = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
+        applicationContext.getBean("demoController");
     }
 }
