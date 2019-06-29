@@ -14,9 +14,11 @@ import java.util.List;
 public class OringinDemo {
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("application.xml");
-        BaseDemo baseDemo = (BaseDemo)applicationContext.getBean("baseDemo");
-        System.out.println("");
+        //ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("application.xml");
+        //BaseDemo baseDemo = (BaseDemo)applicationContext.getBean("baseDemo");
+        //System.out.println("");
+        String a = OringinDemo.class.getPackage().getName();
+        System.out.println(a);
 
 
     }
