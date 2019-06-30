@@ -3,6 +3,7 @@ package com.example;
 import com.example.common.BaseDemo;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -12,13 +13,16 @@ import java.util.List;
  * @version ideaIU-2018.2.3.win_home
  */
 public class OringinDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException {
 
-        //ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("application.xml");
-        //BaseDemo baseDemo = (BaseDemo)applicationContext.getBean("baseDemo");
-        //System.out.println("");
-        String a = OringinDemo.class.getPackage().getName();
-        System.out.println(a);
+        BaseDemo baseDemo1 = new BaseDemo();
+
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("application.xml");
+        BaseDemo baseDemo = (BaseDemo)applicationContext.getBean("baseDemo");
+        System.out.println("");
+        Constructor<OringinDemo> declaredConstructor = OringinDemo.class.getDeclaredConstructor();
+
+        //System.out.println(a);
 
 
     }

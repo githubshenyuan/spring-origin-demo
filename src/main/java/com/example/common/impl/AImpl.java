@@ -9,6 +9,11 @@ import com.example.common.BaseInterface;
  */
 public abstract class AImpl implements BaseInterface, BaseAInterface {
 
+    private String aName;
+    private String aAge;
+
+
+
     public String a() {
         return null;
     }
@@ -23,5 +28,21 @@ public abstract class AImpl implements BaseInterface, BaseAInterface {
 
     public String d() {
         return null;
+    }
+
+    public String getaName() {
+        return aName;
+    }
+
+    public void setaName(String aName) {
+        this.aName = aName;
+    }
+
+    public String getaAge() {
+        return aAge;
+    }
+
+    public void setaAge(String aAge) {
+        this.aAge = aAge;
     }
 }
