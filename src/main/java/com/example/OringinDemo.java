@@ -15,12 +15,10 @@ import java.util.List;
 public class OringinDemo {
     public static void main(String[] args) throws NoSuchMethodException {
 
-        BaseDemo baseDemo1 = new BaseDemo();
 
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("application.xml");
         BaseDemo baseDemo = (BaseDemo)applicationContext.getBean("baseDemo");
-        System.out.println("");
-        Constructor<OringinDemo> declaredConstructor = OringinDemo.class.getDeclaredConstructor();
+
 
         //System.out.println(a);
 
