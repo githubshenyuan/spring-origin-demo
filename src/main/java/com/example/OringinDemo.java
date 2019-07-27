@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.common.BaseDemo;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.lang.reflect.Constructor;
@@ -17,10 +18,15 @@ public class OringinDemo {
 
 
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("application.xml");
-        BaseDemo baseDemo = (BaseDemo)applicationContext.getBean("baseDemo");
+        // BaseDemo baseDemo = new BaseDemo();
+        //BaseDemo baseDemo = (BaseDemo)applicationContext.getBean("baseDemo");
 
 
-        //System.out.println(a);
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(OringinDemo.class);
+
+        BaseDemo baseDemo = (BaseDemo)annotationConfigApplicationContext.getBean("baseDemo");
+
+        System.out.println("");
 
 
     }
