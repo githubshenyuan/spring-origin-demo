@@ -18,13 +18,9 @@ public class OringinDemo {
 
 
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("application.xml");
-        // BaseDemo baseDemo = new BaseDemo();
-        //BaseDemo baseDemo = (BaseDemo)applicationContext.getBean("baseDemo");
+        //BaseDemo baseDemo = new BaseDemo();
+        BaseDemo baseDemo = (BaseDemo)applicationContext.getBean("baseDemo");
 
-
-        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(OringinDemo.class);
-
-        BaseDemo baseDemo = (BaseDemo)annotationConfigApplicationContext.getBean("baseDemo");
 
         System.out.println("");
 
